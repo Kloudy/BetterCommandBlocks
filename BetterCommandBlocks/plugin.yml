@@ -1,0 +1,35 @@
+name: BetterCommandBlocks
+main: kloudy.mc.bettercommandblocks.BetterCommandBlocks
+version: 1.0
+author: Kloudy
+
+depend: [WorldEdit]
+
+commands:
+  bcb:
+    description: used to define commands for the BetterCommandBlocks plugin
+    
+permissions:
+  bcb*:
+    description: Allows a player to use all bcb commands and features.
+    children:
+      bcb.removeoverride: true
+      bcb.display: true
+      bcb.variable: true
+      bcb.lists: true
+      bcb.break: true
+  bcb.removeoverride:
+    description: Allows a player to remove a display or variable that is not their own
+    default: op
+  bcb.display:
+    description: Allows a player to create a display
+    default: op
+  bcb.variable:
+    description: Allows a player to create a variable
+    default: op
+  bcb.lists:
+    description: Allows a player to view display and variable lists
+    default: op
+  bcb.break:
+    description: Allows a player to break display blocks
+    default: op
